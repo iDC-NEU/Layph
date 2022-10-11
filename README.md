@@ -29,4 +29,5 @@
 ## References
 
  [1] Gong S, Tian C, Yin Q, et al. Automating incremental graph processing with flexible memoization[J]. Proceedings of the VLDB Endowment, 2021, 14(9): 1613-1625.
+ 
  [2] Fan W, Xu J, Wu Y, et al. GRAPE: Parallelizing sequential graph computations[J]. Proceedings of the VLDB Endowment, 2017, 10(12): 1889-1892.
