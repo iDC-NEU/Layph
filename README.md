@@ -12,6 +12,7 @@
 - [MPICH](https://www.mpich.org/) (>= 3.0) or [OpenMPI](https://www.open-mpi.org/) (>= 3.0.0)
 - [glog](https://github.com/google/glog) (>= 0.3.4)
 - [gflags](https://github.com/gflags/gflags) (>= 2.2.0);
+- [boost](>= 1.65.1);
 
 ### Building Layph and examples
 
