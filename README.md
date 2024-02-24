@@ -16,14 +16,14 @@
 ### Building Layph and examples
 
 ```bash
-  mkdir build
-  cd build
-  cmake .. -DUSE_CILK=true
-  make layph
-  # run PageRank
-  mpirun -n 1 ./layph -application pagerank -vfile test.v -efile test.base -efile_update test.update -directed=1 -cilk=true -termcheck_threshold 0.000001 -app_concurrency 16 -compress=1 -portion=1 -build_index_concurrency=16
-  # run single-source shortest path
-  mpirun -n 1 ./layph -application sssp -vfile test.v -efile test_w.base -efile_update test_w.update -directed=1 -cilk=true -app_concurrency 16 -compress=1 -portion=1 -sssp_source=0 -build_index_concurrency=16
+mkdir build
+cd build
+cmake .. -DUSE_CILK=true
+make layph
+# run PageRank
+mpirun -n 1 ./layph -application pagerank -vfile test.v -efile ../Dataset/test.base -efile_update ../Dataset/test.update -directed=1 -cilk=true -termcheck_threshold 0.000001 -app_concurrency 16 -compress=1 -portion=1 -build_index_concurrency=16 -max_node_num=5
+# run single-source shortest path
+mpirun -n 1 ./layph -application sssp -vfile test.v -efile ../Dataset/test_w.base -efile_update ../Dataset/test_w.update -directed=1 -cilk=true -app_concurrency 16 -compress=1 -portion=1 -sssp_source=0 -build_index_concurrency=16 -max_node_num=5
 ```
 
 ## References
@@ -31,3 +31,5 @@
  [1] Gong S, Tian C, Yin Q, et al. Automating incremental graph processing with flexible memoization[J]. Proceedings of the VLDB Endowment, 2021, 14(9): 1613-1625.
  
  [2] Fan W, Xu J, Wu Y, et al. GRAPE: Parallelizing sequential graph computations[J]. Proceedings of the VLDB Endowment, 2017, 10(12): 1889-1892.
+
+ [3] Yu S, Gong S, Zhang Y, et al. Layph: Making Change Propagation Constraint in Incremental Graph Processing by Layering Graph[C]//2023 IEEE 39th International Conference on Data Engineering. IEEE, 2023: 2766-2779.
