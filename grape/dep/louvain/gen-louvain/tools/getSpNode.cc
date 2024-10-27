@@ -237,17 +237,7 @@ void r_w_Data(string edge_new_path, int pass_step, string sp_path) {
 
 int main(int argc, char **argv){
     std::cout << "- start getspNode..." << std::endl;
-    // cmd: g++ getSpNode.cc -o getSpNode && ./getSpNode uk-2005 0.0010
-    // std::string filename = "arabic-2005";
-    // std::string filename = argv[1];
-    // std::string percentage = argv[2];
-    // std::cout << filename << ", " << percentage << std::endl;
-    // inc
-    // std::string cluster_path = "/mnt2/neu/yusong/dataset/louvain_bin/"+filename+"_"+percentage+"_node2comm_level";
-    // std::string path = "/mnt2/neu/yusong/dataset/large/"+filename+"/"+percentage+"/"+filename+".base";
-    // no-inc
-    // std::string cluster_path = "/mnt2/neu/yusong/dataset/louvain_bin/"+filename+"_node2comm_level";
-    // std::string path = "/mnt/data/nfs/yusong/dataset/large/"+filename+"/"+filename+".e";
+    // cmd: g++ getSpNode.cc -o getSpNode && ./getSpNode cluster_path out_path max_comm_size
 
     std::cout << "--------" << std::endl;
     std::string cluster_path = argv[1];

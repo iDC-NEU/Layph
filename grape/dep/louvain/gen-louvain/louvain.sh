@@ -2,8 +2,9 @@
 echo -e "\n Executing louvain.sh...\n"
 
 ################################################################################
-root_path=../../
-ipath=graph.txt
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+root_path=${SCRIPT_DIR}/../../..
+ipath=${root_path}/dep/louvain/dataset/graph.txt
 ################################################################################
 
 
@@ -38,7 +39,7 @@ echo "-------------------------------------"
 
 echo ${louvain_path}/getSpNode.cc
 g++ ${louvain_path}/tools/getSpNode.cc -o ${louvain_path}/tools/getSpNode
-cmd="${louvain_path}/tools/getSpNode ${opath}_node2comm_level ${ipath}"
+cmd="${louvain_path}/tools/getSpNode ${opath}_node2comm_level ${ipath} ${max_comm_size}"
 echo $cmd
 eval $cmd
 echo "-------------------------------------"
